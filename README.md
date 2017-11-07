@@ -1,6 +1,7 @@
 # `theme_title_use_abbreviated_path equivalent` for zsh on osx
 
-Couldn't find anything that worked for me so I made my own
+Displays the current path with all but the last directory shortened to the first letter
+Replaces $HOME with ~
 
 ## Installation
 copy .abbr_pwd to $HOME then source it from your .zshrc

@@ -1,4 +1,4 @@
-# `theme_title_use_abbreviated_path equivalent` for zsh on osx
+# `theme_title_use_abbreviated_path` equivalent for zsh on osx
 
 Displays the current path with all but the last directory shortened to the first letter
 

@@ -1,6 +1,6 @@
 # abbreviated pwd for oh-my-zsh
 
-Equivalent of the `theme_title_use_abbreviated_path` parameter from oh-my-fish
+Functionality of the `theme_title_use_abbreviated_path` parameter from some oh-my-fish themes
 
 Displays the current path with all but the last directory shortened to the first letter
 

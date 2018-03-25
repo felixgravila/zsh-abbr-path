@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 function felix_pwd_abbr {
 	base_pwd=$PWD
 	tilda_notation=${base_pwd//$HOME/\~}
@@ -14,11 +15,22 @@ function felix_pwd_abbr {
 		formed_pwd='/'
 	fi
 
-	formed_pwd=${formed_pwd}$(echo ${pwd_list[1]} | cut -c1)
+	firstchar=$(echo ${pwd_list[1]} | cut -c1)
+	if [[ $firstchar == '.' ]] ; then
+		firstchar=$(echo ${pwd_list[1]} | cut -c1,2)
+	fi
+
+	formed_pwd=${formed_pwd}$firstchar
 
 	for ((i=2; i <= $list_len; i++)) do
 		if [[ $i != ${list_len} ]]; then
-			formed_pwd=${formed_pwd}/$(echo ${pwd_list[$i]} | cut -c1)
+
+			firstchar=$(echo ${pwd_list[$i]} | cut -c1)
+			if [[ $firstchar == '.' ]] ; then
+				firstchar=$(echo ${pwd_list[$i]} | cut -c1,2)
+			fi
+
+			formed_pwd=${formed_pwd}/$firstchar
 		else
 			formed_pwd=${formed_pwd}/${pwd_list[$i]}
 		fi

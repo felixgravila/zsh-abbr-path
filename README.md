@@ -16,3 +16,7 @@ You can use my own theme copy if agnoster suits you, but if not you can edit you
 ## Screenshot
 
 ![alt text](https://raw.githubusercontent.com/felixgravila/zsh-abbr-path/master/screenshot.png)
+
+## Thanks to contributors
+
+Thank you @charlesdaniels for fix: Fixed behavior for paths containing hidden directories
